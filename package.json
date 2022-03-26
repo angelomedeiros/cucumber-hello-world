@@ -1,15 +1,23 @@
 {
-  "name": "cucumber-starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "cucumber-js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@cucumber/cucumber": "^7.3.2"
-  }
+    "name": "cucumber-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "cross-env NODE_ENV=development cucumber-js",
+        "test:prd": "cross-env NODE_ENV=production cucumber-js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "^7.3.2",
+        "chai": "4.3.6",
+        "chromedriver": "99.0.0",
+        "selenium-webdriver": "4.1.1"
+    },
+    "dependencies": {
+        "@types/selenium-webdriver": "^4.0.18",
+        "cross-env": "^7.0.3"
+    }
 }
