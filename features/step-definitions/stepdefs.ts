@@ -1,7 +1,7 @@
-const { Given, When, Then, AfterAll } = require("@cucumber/cucumber");
-const assert = require("assert");
+import { Given, When, Then, AfterAll } from "cucumber";
+import assert from "assert";
 
-function isItFriday(today) {
+function isItFriday(today: string) {
     if (today === "Friday") {
         return "TGIF";
     } else {
@@ -19,8 +19,4 @@ When("I ask whether it's Friday yet", function () {
 
 Then("I should be told {string}", function (expectedAnswer) {
     assert.strictEqual(this.actualAnswer, expectedAnswer);
-});
-
-AfterAll(async function () {
-    console.log("AfterAll Stepdefs");
 });

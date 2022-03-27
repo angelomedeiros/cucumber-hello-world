@@ -1,3 +1,12 @@
+let common = [
+    "features/**/*.feature",
+    "--require-module ts-node/register",
+    "--require features/step-definitions/**/*.ts",
+    "--format progress-bar",
+    "--format node_modules/cucumber-pretty",
+].join(" ");
+
 module.exports = {
-  default: `--publish-quiet --format-options '{"snippetInterface": "synchronous"}'`,
+    default: common,
+    // More profiles can be added if desired
 };
